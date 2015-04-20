@@ -11,15 +11,9 @@ var HeaderNavbarMenu = React.createClass({
       <div className="navbar-custom-menu">
         <ul className="nav navbar-nav">
           <MessageMenu />
-          <li className="dropdown notifications-menu">
-            <NotificationsMenu />
-          </li>
-          <li className="dropdown tasks-menu">
-            <TasksMenu />
-          </li>
-          <li className="dropdown user-menu">
-            <UserMenu />
-          </li>
+          <NotificationsMenu />
+          <TasksMenu />
+          <UserMenu />
         </ul>
       </div>
     );
