@@ -30,7 +30,7 @@ body {
 .wrapper {
   min-height: 100%;
   position: static;
-  overflow: hidden;
+  overflow: hidden!important;
 }
 .wrapper:before,
 .wrapper:after {
@@ -687,14 +687,15 @@ a:focus {
 }
 .control-sidebar {
   position: absolute;
-  top: 50px;
+  top: 0;
+  padding-top: 50px;
   right: 0;
   width: 230px;
   z-index: 1010;
 }
 @media (max-width: 768px) {
   .control-sidebar {
-    top: 100px;
+    padding-top: 100px;
   }
 }
 .control-sidebar > .tab-content {
@@ -813,6 +814,7 @@ a:focus {
 .control-sidebar-dark {
   color: #b8c7ce;
 }
+.control-sidebar-dark,
 .control-sidebar-dark + .control-sidebar-bg {
   background: #222d32;
 }
@@ -853,6 +855,7 @@ a:focus {
 .control-sidebar-light {
   color: #5e5e5e;
 }
+.control-sidebar-light,
 .control-sidebar-light + .control-sidebar-bg {
   background: #f9fafc;
   border-left: 1px solid #d2d6de;
@@ -1185,23 +1188,23 @@ a:focus {
 }
 @-webkit-keyframes flipInX {
   0% {
-    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    transition-timing-function: ease-in;
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-transition-timing-function: ease-in;
     opacity: 0;
   }
   40% {
-    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    transition-timing-function: ease-in;
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-transition-timing-function: ease-in;
   }
   60% {
-    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
     opacity: 1;
   }
   80% {
-    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
   }
   100% {
-    transform: perspective(400px);
+    -webkit-transform: perspective(400px);
   }
 }
 /* Fix dropdown menu in navbars */
