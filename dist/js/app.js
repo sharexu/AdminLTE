@@ -138,7 +138,7 @@ $.AdminLTE.options = {
 $(function () {
   //Extend options if external options exist
   if (typeof AdminLTEOptions !== "undefined") {
-    $.AdminLTE.options = $.extend({},
+    $.extend(true,
             $.AdminLTE.options,
             AdminLTEOptions);
   }
@@ -474,9 +474,6 @@ function _init() {
       //Slide over content
       if (slide) {
         sidebar.addClass('control-sidebar-open');
-        $('.content-wrapper, .right-side').on('click', function () {
-          _this.close(sidebar, slide);
-        });
       } else {
         //Push the content by adding the open class to the body instead 
         //of the sidebar itself
